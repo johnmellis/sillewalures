@@ -1,0 +1,156 @@
+<html><head><link rel="stylesheet" type="text/css" href="css/style.css"/></head><body><div class="nav"><div class="navbar"><ul><li><a href="/">Home</a></li><li><a href="/snapback-hats">Snapback hats</a></li></ul></div></div><div id='collection-component-8a60c3113c3'></div>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'sillewa.myshopify.com',
+          storefrontAccessToken: '920380cfae99424d3ad71ba5fa6006d5',
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: 29692493856,
+            node: document.getElementById('collection-component-8a60c3113c3'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+  "product": {
+    "variantId": "all",
+    "contents": {
+      "imgWithCarousel": false,
+      "variantTitle": false,
+      "description": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        },
+        "imgWrapper": {
+          "position": "relative",
+          "height": "0",
+          "padding-top": "calc(75% + 15px)"
+        },
+        "img": {
+          "height": "calc(100% - 15px)",
+          "position": "absolute",
+          "left": "0",
+          "right": "0",
+          "top": "0"
+        }
+      },
+      "button": {
+        "background-color": "#f1d63d",
+        ":hover": {
+          "background-color": "#d9c137"
+        },
+        "border-radius": "5px",
+        ":focus": {
+          "background-color": "#d9c137"
+        }
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#f1d63d",
+        ":hover": {
+          "background-color": "#d9c137"
+        },
+        "border-radius": "5px",
+        ":focus": {
+          "background-color": "#d9c137"
+        }
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#f1d63d",
+        ":hover": {
+          "background-color": "#d9c137"
+        },
+        "border-radius": "5px",
+        ":focus": {
+          "background-color": "#d9c137"
+        }
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#f1d63d",
+        ":hover": {
+          "background-color": "#d9c137"
+        },
+        ":focus": {
+          "background-color": "#d9c137"
+        }
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script><div class="footer"><p>this is the footer</p></div></body></html>

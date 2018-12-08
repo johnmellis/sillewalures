@@ -1,0 +1,19 @@
+{
+  "name": "sillewa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "setup": "npm run clean && mkdir dist",
+    "build-assets": "cp -r source/css dist/css & cp -r source/img dist/img & cp -r source/js dist/js",
+    "build-pages": "pug source/pages -o dist",
+    "build": "npm run setup && npm run build-assets & npm run build-pages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC", 
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
