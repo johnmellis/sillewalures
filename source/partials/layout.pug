@@ -1,10 +1,13 @@
 html
   head
     link(rel="stylesheet" type="text/css" href="css/style.css")
+    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro")
     block head
-
-  body
-    include ../partials/nav
-    block content
-    include ../partials/footer
+  body#site
+    header#site-header
+      include ../partials/nav
+    main#site-content
+      block content
+    footer#site-footer
+      include ../partials/footer
     
