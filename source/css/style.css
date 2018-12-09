@@ -105,7 +105,7 @@ h6{
 .banner-content{
   display:flex;
   flex-direction:column;
-  padding-left:50px;
+  padding-left:50px ;
 }
 
 .banner-title{
