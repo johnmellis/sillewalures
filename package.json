@@ -8,11 +8,12 @@
     "setup": "npm run clean && mkdir dist",
     "build-assets": "cp -r source/css dist/css & cp -r source/img dist/img & cp -r source/js dist/js",
     "build-pages": "pug source/pages -o dist",
-    "build": "npm run setup && npm run build-assets & npm run build-pages && exit=1"
+    "build": "npm run setup && npm run build-assets & npm run build-pages && exit=1",
+    "deploy": "git add . && git commit -m $message"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC", 
+  "license": "ISC",
   "dependencies": {
     "pug-cli": "^1.0.0-alpha6"
   }
