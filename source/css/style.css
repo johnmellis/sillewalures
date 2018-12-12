@@ -180,6 +180,11 @@
   text-align:center;
 }
 
+
+/*collection container*/
+.collection-container{
+  padding:10%;
+}
 /*footer*/
   .footer{
     display:flex;
