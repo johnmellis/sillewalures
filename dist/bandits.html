@@ -1,4 +1,6 @@
-<html><head><link rel="stylesheet" type="text/css" href="css/style.css"/><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"/><title></title></head><body id="site"><header id="site-header"><div class="navbar"><a href="/"><img class="navbar-brand" src="https://cdn.shopify.com/s/files/1/2510/8840/files/sillewalogotext_100x@2x.png?v=1510272581"/></a><div class="navbar-items navbar-items-right"><a class="navbar-link" href="/shallow-divers">Shallow Divers</a><a class="navbar-link" href="/medium-divers">Medium Divers</a><a class="navbar-link" href="/deep-divers">Deep Divers</a><a class="navbar-link" href="/outdoor-gear">Outdoor Gear</a></div></div></header><main id="site-content"><title>Sillewa Lures</title><div class="page-container"><h1>Collection Title</h1><p>This collection...</p></div><div class="collection-container"><div id='collection-component-ee88659af55'></div><script>(function () {
+<html><head><link rel="stylesheet" type="text/css" href="css/style.css"/><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"/></head><body id="site"><header id="site-header"><div class="navbar"><a href="/"><img class="navbar-brand" src="https://cdn.shopify.com/s/files/1/2510/8840/files/sillewalogotext_100x@2x.png?v=1510272581"/></a><div class="navbar-items navbar-items-right"><a class="navbar-link" href="/shallow-divers">Shallow Divers</a><a class="navbar-link" href="/medium-divers">Medium Divers</a><a class="navbar-link" href="/deep-divers">Deep Divers</a><a class="navbar-link" href="/outdoor-gear">Outdoor Gear</a></div></div></header><main id="site-content"><div class="page-container"><div id='product-component-2fdf2aa0d8f'></div><script>/*<![CDATA[*/
+
+(function () {
   var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   if (window.ShopifyBuy) {
     if (window.ShopifyBuy.UI) {
@@ -25,55 +27,54 @@
     });
 
     ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('collection', {
-        id: 28665577504,
-        node: document.getElementById('collection-component-ee88659af55'),
+      ui.createComponent('product', {
+        id: [1839454388339],
+        node: document.getElementById('product-component-2fdf2aa0d8f'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
           "product": {
-            "buttonDestination": "modal",
+            "layout": "horizontal",
             "variantId": "all",
+            "width": "100%",
             "contents": {
-              "imgWithCarousel": false,
+              "img": false,
+              "imgWithCarousel": true,
               "variantTitle": false,
-              "options": false,
-              "description": false,
-              "buttonWithQuantity": false,
+              "description": true,
+              "buttonWithQuantity": true,
+              "button": false,
               "quantity": false
-            },
-            "text": {
-              "button": "VIEW PRODUCT"
             },
             "styles": {
               "product": {
+                "text-align": "left",
                 "@media (min-width: 601px)": {
-                  "max-width": "calc(25% - 20px)",
-                  "margin-left": "20px",
-                  "margin-bottom": "50px",
-                  "width": "calc(25% - 20px)"
-                },
-                "imgWrapper": {
-                  "position": "relative",
-                  "height": "0",
-                  "padding-top": "calc(75% + 15px)"
-                },
-                "img": {
-                  "height": "calc(100% - 15px)",
-                  "position": "absolute",
-                  "left": "0",
-                  "right": "0",
-                  "top": "0"
+                  "max-width": "100%",
+                  "margin-left": "0",
+                  "margin-bottom": "50px"
                 }
               },
               "button": {
-                "background-color": "#f1d63d",
+                "background-color": "#ffce2b",
+                "color": "#606060",
+                "padding-left": "25px",
+                "padding-right": "25px",
                 ":hover": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927",
+                  "color": "#606060"
                 },
-                "border-radius": "5px",
                 ":focus": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927"
                 }
+              },
+              "title": {
+                "font-size": "26px"
+              },
+              "price": {
+                "font-size": "18px"
+              },
+              "compareAt": {
+                "font-size": "15px"
               }
             }
           },
@@ -83,13 +84,14 @@
             },
             "styles": {
               "button": {
-                "background-color": "#f1d63d",
+                "background-color": "#ffce2b",
+                "color": "#606060",
                 ":hover": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927",
+                  "color": "#606060"
                 },
-                "border-radius": "5px",
                 ":focus": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927"
                 }
               },
               "footer": {
@@ -115,13 +117,16 @@
                 }
               },
               "button": {
-                "background-color": "#f1d63d",
+                "background-color": "#ffce2b",
+                "color": "#606060",
+                "padding-left": "25px",
+                "padding-right": "25px",
                 ":hover": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927",
+                  "color": "#606060"
                 },
-                "border-radius": "5px",
                 ":focus": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927"
                 }
               }
             }
@@ -129,13 +134,23 @@
           "toggle": {
             "styles": {
               "toggle": {
-                "background-color": "#f1d63d",
+                "background-color": "#ffce2b",
                 ":hover": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927"
                 },
                 ":focus": {
-                  "background-color": "#d9c137"
+                  "background-color": "#e6b927"
                 }
+              },
+              "count": {
+                "color": "#606060",
+                ":hover": {
+                  "color": "#606060"
+                },
+                "font-size": "16px"
+              },
+              "iconPath": {
+                "fill": "#606060"
               }
             }
           },

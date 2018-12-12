@@ -18,8 +18,10 @@
     font-family: var(--title-font);
   }
 
-  .page-container-fullcontainer{
-
+  .page-container{
+    width:80%;
+    margin:auto;
+    padding-top:40px;
   }
 
   .page-container-full{

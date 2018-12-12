@@ -1,0 +1,179 @@
+extends ../partials/layout
+
+block head
+
+block content
+  .page-container
+    <div id='product-component-2fdf2aa0d8f'></div>
+    script.
+      /*<![CDATA[*/
+
+      (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+          if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+          } else {
+            loadScript();
+          }
+        } else {
+          loadScript();
+        }
+
+        function loadScript() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = scriptURL;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+          script.onload = ShopifyBuyInit;
+        }
+
+        function ShopifyBuyInit() {
+          var client = ShopifyBuy.buildClient({
+            domain: 'sillewa.myshopify.com',
+            storefrontAccessToken: '920380cfae99424d3ad71ba5fa6006d5',
+          });
+
+          ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+              id: [1839454388339],
+              node: document.getElementById('product-component-2fdf2aa0d8f'),
+              moneyFormat: '%24%7B%7Bamount%7D%7D',
+              options: {
+                "product": {
+                  "layout": "horizontal",
+                  "variantId": "all",
+                  "width": "100%",
+                  "contents": {
+                    "img": false,
+                    "imgWithCarousel": true,
+                    "variantTitle": false,
+                    "description": true,
+                    "buttonWithQuantity": true,
+                    "button": false,
+                    "quantity": false
+                  },
+                  "styles": {
+                    "product": {
+                      "text-align": "left",
+                      "@media (min-width: 601px)": {
+                        "max-width": "100%",
+                        "margin-left": "0",
+                        "margin-bottom": "50px"
+                      }
+                    },
+                    "button": {
+                      "background-color": "#ffce2b",
+                      "color": "#606060",
+                      "padding-left": "25px",
+                      "padding-right": "25px",
+                      ":hover": {
+                        "background-color": "#e6b927",
+                        "color": "#606060"
+                      },
+                      ":focus": {
+                        "background-color": "#e6b927"
+                      }
+                    },
+                    "title": {
+                      "font-size": "26px"
+                    },
+                    "price": {
+                      "font-size": "18px"
+                    },
+                    "compareAt": {
+                      "font-size": "15px"
+                    }
+                  }
+                },
+                "cart": {
+                  "contents": {
+                    "button": true
+                  },
+                  "styles": {
+                    "button": {
+                      "background-color": "#ffce2b",
+                      "color": "#606060",
+                      ":hover": {
+                        "background-color": "#e6b927",
+                        "color": "#606060"
+                      },
+                      ":focus": {
+                        "background-color": "#e6b927"
+                      }
+                    },
+                    "footer": {
+                      "background-color": "#ffffff"
+                    }
+                  }
+                },
+                "modalProduct": {
+                  "contents": {
+                    "img": false,
+                    "imgWithCarousel": true,
+                    "variantTitle": false,
+                    "buttonWithQuantity": true,
+                    "button": false,
+                    "quantity": false
+                  },
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "100%",
+                        "margin-left": "0px",
+                        "margin-bottom": "0px"
+                      }
+                    },
+                    "button": {
+                      "background-color": "#ffce2b",
+                      "color": "#606060",
+                      "padding-left": "25px",
+                      "padding-right": "25px",
+                      ":hover": {
+                        "background-color": "#e6b927",
+                        "color": "#606060"
+                      },
+                      ":focus": {
+                        "background-color": "#e6b927"
+                      }
+                    }
+                  }
+                },
+                "toggle": {
+                  "styles": {
+                    "toggle": {
+                      "background-color": "#ffce2b",
+                      ":hover": {
+                        "background-color": "#e6b927"
+                      },
+                      ":focus": {
+                        "background-color": "#e6b927"
+                      }
+                    },
+                    "count": {
+                      "color": "#606060",
+                      ":hover": {
+                        "color": "#606060"
+                      },
+                      "font-size": "16px"
+                    },
+                    "iconPath": {
+                      "fill": "#606060"
+                    }
+                  }
+                },
+                "productSet": {
+                  "styles": {
+                    "products": {
+                      "@media (min-width: 601px)": {
+                        "margin-left": "-20px"
+                      }
+                    }
+                  }
+                }
+              }
+            });
+          });
+        }
+      })();
+      /*]]>*/
